@@ -1,0 +1,44 @@
+{
+	"manifest_version": 2,
+	"name": "Y-img",
+	"version": "0.0.0.1",
+	"icons": {
+		"128": "128x128.png"
+	},
+	// Разрешения доступа
+	"permissions": [
+		"identity",	// Разрешение использовать идентификацию через OAuth2
+		"storage",	// Для использования внутреннего хранилища
+		"https://disk.yandex.ru/*"
+	],
+	// Чтобы отлавливать нажатие на кнопку расширения
+	"browser_action": {
+		"default_title": "Y-img",
+		"default_icon": "128x128.png"
+//		"default_popup": "popup.html"
+	},
+	// Скрипты, выполняющиеся 1 раз при запуске расширения
+	"background": {
+		"scripts": [
+			"jquery.min.2.2.0.js",	// Подключить jquery к фоновым скриптам
+			"background.js",		// фоновый скрипт для выполнения общий действий
+			"extension_event.js"	// Event-скрипт для обработки события нажатия на кнопку расширения
+		],
+		"persistent": false
+	},
+	// Скрипты для работы с контентом
+	"content_scripts":[{
+		"matches": [
+			"<all_urls>"
+		],
+		"js": [
+			"jquery.min.2.2.0.js",	// Подключить jquery к контентным скриптам
+			"content.js"			// Скрипт для модификации контента (текущей открытой страницы)
+		]
+	}],
+	// Скрипты, которые должны быть доступны с контента загруженных страниц
+	"web_accessible_resources": [
+		"dropbox.js",
+		"dropbox.css"
+	]
+}

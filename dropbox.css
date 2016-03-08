@@ -1,0 +1,12 @@
+#yImgDropBox {
+	top: 10px;
+	right: 10px;
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	background-color: green;
+	z-index: 1000;
+	text-align: center;
+	line-height: 70px;
+	color: #0FF;
+}
