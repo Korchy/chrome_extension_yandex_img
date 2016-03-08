@@ -22,12 +22,9 @@ Create application on https://oauth.yandex.ru/client/new
 Rights:	Яндекс.Диск REST API
 
 - Доступ к информации о Диске
-
 - Доступ к папке приложения на Диске
-
-   Запись в любом месте на Диске
-
-   Чтение всего Диска
+- Запись в любом месте на Диске
+- Чтение всего Диска
 
 Callback URL: https://_installed_extension_id.chromiumapp.org/yandex.ru
 
