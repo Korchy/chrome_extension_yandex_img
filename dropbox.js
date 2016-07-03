@@ -1,11 +1,3 @@
-/*
-$(document).on('ready', function(event) {
-	// Можно так, тогда только один клик по иконке расширения
-	// но надо писать токен в аттрибуты объекта yImgDropBox
-	var receivedToken = $('#yImgDropBox').attr('yImgToken');
-	$('#yImgDropBox').yImgDropBox({'yImgToken': receivedToken});
-});
-*/
 $(window).on('yImgDropBoxStart', function(event) {
 	var receivedToken = event.detail.yImgToken ? event.detail.yImgToken : event.originalEvent.detail.yImgToken;
 	$('#yImgDropBox').yImgDropBox({'yImgToken': receivedToken});
